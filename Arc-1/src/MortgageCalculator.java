@@ -4,13 +4,22 @@ import java.util.Scanner;
 
 class MortgageCalculator{
     public static void main(String[] args) {
+        double principalAmount=0;
+        float IntrestRate=0;
+        int months=0;
         Scanner sc=new Scanner(System.in);
-        System.out.println("कृपया मूल रकम प्रविष्ट गर्नुहोस्:> ");
-        double principalAmount=sc.nextDouble();
-        System.out.println("कृपया मासिक ब्याज दर% प्रविष्ट गर्नुहोस्:> ");
-        float IntrestRate=sc.nextFloat();
-        System.out.println("कृपया कुल समय अवधि (महीनामा) प्रविष्ट गर्नुहोस्:> ");
-        int months=sc.nextInt();
+        while (principalAmount<1000 || principalAmount>10000000){
+        System.out.println("कृपया मूल रकम प्रविष्ट गर्नुहोस्(<1000-10000000):> ");
+        principalAmount=sc.nextDouble();
+        }
+        while (IntrestRate<=0 || IntrestRate >30){
+            System.out.println("कृपया मासिक ब्याज दर% प्रविष्ट गर्नुहोस्(0<-30):> ");
+            IntrestRate=sc.nextFloat();
+        }
+        while(months<=0 || months>30) {
+            System.out.println("कृपया कुल समय अवधि (महीनामा) प्रविष्ट गर्नुहोस्(1-30):> ");
+            months = sc.nextInt();
+        }
         double Mortgage=principalAmount*((IntrestRate*Math.pow(1+IntrestRate,months))/Math.pow(1+IntrestRate,months)-1);
         Locale nepalLocale = new Locale("ne", "NP");
         NumberFormat nepaliCurrency=NumberFormat.getCurrencyInstance(nepalLocale);
