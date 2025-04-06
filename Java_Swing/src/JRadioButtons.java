@@ -29,10 +29,10 @@ public void actionPerformed(ActionEvent e){
 if(e.getSource()==pizzaButton){
     System.out.println("Pizza in the House");
 }
-if(e.getSource()==hamburgerButton){
+else if(e.getSource()==hamburgerButton){
     System.out.println("Hamburger in the house");
 }
-if(e.getSource()==hotdogButton){
+else if(e.getSource()==hotdogButton){
     System.out.println("Hotdog in the house");
 }
 }
