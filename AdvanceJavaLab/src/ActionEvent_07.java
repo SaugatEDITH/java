@@ -11,6 +11,7 @@ JTextField t1,t2;
 JLabel l1 = new JLabel(); // Initialize JLabel to avoid null pointer exception
 ActionEventing(){
     this.setLayout(new FlowLayout());
+    this.setTitle("Action Listiener");
     this.setSize(512,512);
     this.add(new JLabel("First Number:"));
     t1=new JTextField(10);
