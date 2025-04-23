@@ -1,5 +1,4 @@
 // variables premetives non premetives & scape sequences
-import java.awt.*;
 import java.util.Date;
 
 class Variable{
