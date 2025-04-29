@@ -1,13 +1,15 @@
 public class recursion {
-    public static int recursion(int x){
+    public static int recursion(int x,int result){
         if (x<=0){
-            return 1;
+            return result;
         }else{
-            System.out.println(x);
-            return recursion(x-1);
+         
+            result*=x;
+            return recursion(x-1,result);
         }
     }
     public static void main(String[] args) {
-        recursion(10);
+        int result=1;
+        System.out.println("the recursion of 10 is: "+recursion(10,result));
     }
 }
